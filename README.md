@@ -1,4 +1,4 @@
-# Implementing the Electronics Australia "EDUC-8" Microcomputer in VHDL
+# Implementing the Electronics Australia "EDUC-8" Microcomputer in an FPGA
 
 ## What is it?
 
@@ -16,11 +16,15 @@ I wanted to try to re-create this historic, yet largely unknown machine, and I a
 
 ## The design
 
-Rather than build an emulator, I set out to re-create the original hardware design as closely as possible.  I discovered early on in the process that the schematics were sometimes abbreviated, so I ended up tracing out the PCB overlays and poring over databooks to map out all the circuit paths.  The VHDL presented here is the result.
+Rather than build an emulator, I set out to re-create the original hardware design as closely as possible.  I discovered early on in the process that the schematics were sometimes abbreviated, so I ended up tracing out the PCB overlays and poring over databooks to map out all the circuit paths.  The code presented here is the result.
 
 In keeping with the original design, I have a discrete front panel with switches and LEDs, these are driven via external logic because the load on the FPGA device would be exceeded otherwise, but these drivers don't affect the original design.
 
 One of the larger challenges has been that while EDUC-8 was static in design, FPGA devices don't work the same way, so there _may_ be timing inconsistencies I have not yet discovered.  Also on the device I have used, the lowest rate I could clock the circuit was 1MHz, which is almost 1,000 times faster than the original!
+
+## Requirements
+
+This project is being developed around an Intel/Altera Cyclone-V FPGA for no other reason than I happened to have a development kit.  The project can be read with Intel Quartus Lite v18, which is a free download.
 
 ## Copyrights, Acknowledgements, and the like
 
