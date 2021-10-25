@@ -1,6 +1,60 @@
+// feduc-8: Emulate an EDUC-8 in FPGA
+// Based on EDUC-8 as designed by Jim Rowe and published in "Electronics Australia" Magazine
+// 
+// The code presented here is based on the original articles and is distributed with the 
+// permission of Silicon Chip Publications on a strictly non-commercial-use basis.
+//
+// Reprints of the original articles WILL be needed to complete this project, and can be
+// ordered via www.siliconchip.com.au
+//
 // Emulation of standard TTL logic devices
 // Christopher F. Moran
 
+// 7400
+module em_7400(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
+	input a1 ;
+	input b1 ;
+	input a2 ;
+	input b2 ;
+	input a3 ;
+	input b3 ;
+	input a4 ;
+	input b4 ;
+	output y1 ;
+	output y2 ;
+	output y3 ;
+	output y4 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1 & b1) ;
+	not #(0:9:15, 0:10:15) (y2, a2 & b2) ;
+	not #(0:9:15, 0:10:15) (y3, a3 & b3) ;
+	not #(0:9:15, 0:10:15) (y4, a4 & b4) ;
+	
+endmodule
+
+// 7404
+module em_7404(a1, y1, a2, y2, a3, y3, a4, y4, a5, y5, a6, y6) ;
+	input a1 ;
+	input a2 ;
+	input a3 ;
+	input a4 ;
+	input a5 ;
+	input a6 ;
+	output y1 ;
+	output y2 ;
+	output y3 ;
+	output y4 ;
+	output y5 ;
+	output y6 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1) ;
+	not #(0:9:15, 0:10:15) (y2, a2) ;
+	not #(0:9:15, 0:10:15) (y3, a3) ;
+	not #(0:9:15, 0:10:15) (y4, a4) ;
+	not #(0:9:15, 0:10:15) (y5, a5) ;
+	not #(0:9:15, 0:10:15) (y6, a6) ;
+endmodule
+	
 // 74138
 module em_74138(out, e1, e2, e3, a) ;
 	input [2:0]a ;
