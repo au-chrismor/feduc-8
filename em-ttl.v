@@ -115,6 +115,24 @@ module em_7420(a1, b1, c1, d1, y1, a2, b2, c2, d2, y2) ;
 	not #(0:9:15, 0:10:15) (y2, a2 & b2 & c2 & d2) ;
 	
 endmodule
+
+// 7425
+module em_7425(a1, b1, c1, d1, y1, a2, b2, c2, d2, y2) ;
+	input a1 ;
+	input b1 ;
+	input c1 ;
+	input d1 ;
+	input a2 ;
+	input b2 ;
+	input c2 ;
+	input d2 ;
+	output y1 ;
+	output y2 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1 | b1 | c1 | d1) ;
+	not #(0:9:15, 0:10:15) (y2, a2 | b2 | c2 | d2) ;
+	
+endmodule
 	
 // 74138
 module em_74138(out, e1, e2, e3, a) ;
