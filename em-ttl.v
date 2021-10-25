@@ -186,10 +186,10 @@ module em_7486(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
 	output y3 ;
 	output y4 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 ~^ b1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 ~^ b2) ;
-	not #(0:9:15, 0:10:15) (y3, a3 ~^ b3) ;
-	not #(0:9:15, 0:10:15) (y4, a4 ~^ b4) ;
+	assign y1 = a1 ^ b1 ;
+	assign y2 = a2 ^ b2 ;
+	assign y3 = a3 ^ b3 ;
+	assign y4 = a4 ^ b4 ;
 	
 endmodule
 	
