@@ -25,15 +25,15 @@ module em_7400(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
 	output y3 ;
 	output y4 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 & b1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 & b2) ;
-	not #(0:9:15, 0:10:15) (y3, a3 & b3) ;
-	not #(0:9:15, 0:10:15) (y4, a4 & b4) ;
+	assign y1 = ~(a1 & b1) ;
+	assign y2 = ~(a2 & b2) ;
+	assign y3 = ~(a3 & b3) ;
+	assign y4 = ~(a4 & b4) ;
 	
 endmodule
 
 // 7402
-module em_740(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
+module em_7402(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
 	input a1 ;
 	input b1 ;
 	input a2 ;
@@ -47,10 +47,10 @@ module em_740(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
 	output y3 ;
 	output y4 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 | b1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 | b2) ;
-	not #(0:9:15, 0:10:15) (y3, a3 | b3) ;
-	not #(0:9:15, 0:10:15) (y4, a4 | b4) ;
+	assign y1 = ~(a1 | b1) ;
+	assign y2 = ~(a2 | b2) ;
+	assign y3 = ~(a3 | b3) ;
+	assign y4 = ~(a4 | b4) ;
 	
 endmodule
 
@@ -69,12 +69,12 @@ module em_7404(a1, y1, a2, y2, a3, y3, a4, y4, a5, y5, a6, y6) ;
 	output y5 ;
 	output y6 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1) ;
-	not #(0:9:15, 0:10:15) (y2, a2) ;
-	not #(0:9:15, 0:10:15) (y3, a3) ;
-	not #(0:9:15, 0:10:15) (y4, a4) ;
-	not #(0:9:15, 0:10:15) (y5, a5) ;
-	not #(0:9:15, 0:10:15) (y6, a6) ;
+	assign y1 = ~a1 ;
+	assign y2 = ~a2 ;
+	assign y3 = ~a3 ;
+	assign y4 = ~a4 ;
+	assign y5 = ~a5 ;
+	assign y6 = ~a6 ;
 endmodule
 
 // 7410
@@ -92,9 +92,9 @@ module em_7410(a1, b1, c1, y1, a2, b2, c2, y2, a3, b3, c3, y3) ;
 	output y2 ;
 	output y3 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 & b1 & c1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 & b2 & c2) ;
-	not #(0:9:15, 0:10:15) (y3, a3 & b3 & c3) ;
+	assign y1 = ~(a1 & b1 & c1) ;
+	assign y2 = ~(a2 & b2 & c2) ;
+	assign y3 = ~(a3 & b3 & c3) ;
 	
 endmodule
 
@@ -111,8 +111,8 @@ module em_7420(a1, b1, c1, d1, y1, a2, b2, c2, d2, y2) ;
 	output y1 ;
 	output y2 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 & b1 & c1 & d1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 & b2 & c2 & d2) ;
+	assign y1= ~(a1 & b1 & c1 & d1) ;
+	assign y2= ~(a2 & b2 & c2 & d2) ;
 	
 endmodule
 
@@ -129,8 +129,8 @@ module em_7425(a1, b1, c1, d1, y1, a2, b2, c2, d2, y2) ;
 	output y1 ;
 	output y2 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 | b1 | c1 | d1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 | b2 | c2 | d2) ;
+	assign y1 = ~(a1 | b1 | c1 | d1) ;
+	assign y2 = ~(a2 | b2 | c2 | d2) ;
 	
 endmodule
 
@@ -149,9 +149,9 @@ module em_7427(a1, b1, c1, y1, a2, b2, c2, y2, a3, b3, c3, y3) ;
 	output y2 ;
 	output y3 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 | b1 | c1) ;
-	not #(0:9:15, 0:10:15) (y2, a2 | b2 | c2) ;
-	not #(0:9:15, 0:10:15) (y3, a3 | b3 | c3) ;
+	assign y1 = ~(a1 | b1 | c1) ;
+	assign y2 = ~(a2 | b2 | c2) ;
+	assign y3 = ~(a3 | b3 | c3) ;
 	
 endmodule
 
@@ -167,7 +167,7 @@ module em_7430(a1, b1, c1, d1, e1, f1, g1, h1, y1) ;
 	input h1 ;
 	output y1 ;
 	
-	not #(0:9:15, 0:10:15) (y1, a1 & b1 & c1 & d1 & e1 & f1 & g1 & h1) ;
+	assign y1 = ~(a1 & b1 & c1 & d1 & e1 & f1 & g1 & h1) ;
 	
 endmodule
 
