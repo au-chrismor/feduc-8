@@ -133,6 +133,27 @@ module em_7425(a1, b1, c1, d1, y1, a2, b2, c2, d2, y2) ;
 	not #(0:9:15, 0:10:15) (y2, a2 | b2 | c2 | d2) ;
 	
 endmodule
+
+// 7427
+module em_7427(a1, b1, c1, y1, a2, b2, c2, y2, a3, b3, c3, y3) ;
+	input a1 ;
+	input b1 ;
+	input c1 ;
+	input a2 ;
+	input b2 ;
+	input c2 ;
+	input a3 ;
+	input b3 ;
+	input c3 ;
+	output y1 ;
+	output y2 ;
+	output y3 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1 | b1 | c1) ;
+	not #(0:9:15, 0:10:15) (y2, a2 | b2 | c2) ;
+	not #(0:9:15, 0:10:15) (y3, a3 | b3 | c3) ;
+	
+endmodule
 	
 // 74138
 module em_74138(out, e1, e2, e3, a) ;
