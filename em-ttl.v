@@ -32,6 +32,28 @@ module em_7400(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
 	
 endmodule
 
+// 7402
+module em_740(a1, b1, y1, a2, b2, y2, a3, b3, y3, a4, b4, y4) ;
+	input a1 ;
+	input b1 ;
+	input a2 ;
+	input b2 ;
+	input a3 ;
+	input b3 ;
+	input a4 ;
+	input b4 ;
+	output y1 ;
+	output y2 ;
+	output y3 ;
+	output y4 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1 | b1) ;
+	not #(0:9:15, 0:10:15) (y2, a2 | b2) ;
+	not #(0:9:15, 0:10:15) (y3, a3 | b3) ;
+	not #(0:9:15, 0:10:15) (y4, a4 | b4) ;
+	
+endmodule
+
 // 7404
 module em_7404(a1, y1, a2, y2, a3, y3, a4, y4, a5, y5, a6, y6) ;
 	input a1 ;
@@ -53,6 +75,27 @@ module em_7404(a1, y1, a2, y2, a3, y3, a4, y4, a5, y5, a6, y6) ;
 	not #(0:9:15, 0:10:15) (y4, a4) ;
 	not #(0:9:15, 0:10:15) (y5, a5) ;
 	not #(0:9:15, 0:10:15) (y6, a6) ;
+endmodule
+
+// 7410
+module em_7410(a1, b1, c1, y1, a2, b2, c2, y2, a3, b3, c3, y3) ;
+	input a1 ;
+	input b1 ;
+	input c1 ;
+	input a2 ;
+	input b2 ;
+	input c2 ;
+	input a3 ;
+	input b3 ;
+	input c3 ;
+	output y1 ;
+	output y2 ;
+	output y3 ;
+	
+	not #(0:9:15, 0:10:15) (y1, a1 & b1 & c1) ;
+	not #(0:9:15, 0:10:15) (y2, a2 & b2 & c2) ;
+	not #(0:9:15, 0:10:15) (y3, a3 & b3 & c3) ;
+	
 endmodule
 	
 // 74138
