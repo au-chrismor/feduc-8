@@ -12,7 +12,7 @@ Electronics Australia was subsequently acquired by Silicon Chip after the former
 
 I was in high school and started reading EA when the articles were first published.  At around $A400 to build at the time, I could never have afforded it, and by the time I could afford it, parts were getting hard to obtain.
 
-I wanted to try to re-create this historic, yet largely unknown machine, and I also wanted to learn about FPGA devices, so I figured why not combine the two goals?  As a result "FEDUC-8" was born.
+I wanted to try to re-create this historic, yet largely unknown machine, and I also wanted to learn about FPGA devices, so I figured why not combine the two goals?  As a result "(F)EDUC-8" was born.
 
 ## The design
 
@@ -28,7 +28,7 @@ This project is being developed around an Intel/Altera Cyclone-V FPGA for no oth
 
 ## Copyrights, Acknowledgements, and the like
 
-EDUC-8, it's designs and all the related materials are the property of Silicon Chip Publications.  While the VHDL implementation is my work, it would not be possible without access to those materials.  If you'd like to know more about the original design, reprints are available from Silicon Chip, although the "EDUC-8" book is no longer available.
+EDUC-8, it's designs and all the related materials are the property of Silicon Chip Publications.  While the VHDL implementation is my work, it would not be possible without access to those materials.  If you'd like to know more about the original design, reprints, and a soft copy of the compilation book are available from Silicon Chip, although the physical "EDUC-8" book is no longer available.  The book is very useful because it includes errata from a year or so beyond the original publication.
 
-I am grateful to Nicholas Vinen and Jim Rowe for their permission to publish this work, and in accordance with their approval, I need to remind one and all that the correct pronunciation is "Educate".
+I am grateful to Nicholas Vinen and Jim Rowe for their permission to publish this work, and in accordance with their approval, I need to remind one and all that the correct pronunciation is _"Educate"_.
 
